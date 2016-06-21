@@ -11,12 +11,12 @@ export class TodoItemComponent {
     @Input() todo: Todo;
     @Output() deleted = new EventEmitter();
 
-    toggleDone() {
+    toggleDone(): void {
         this.todo.done = !this.todo.done;
     }
 
     //noinspection ReservedWordAsName
-    delete() {
+    delete(): void {
         this.deleted.emit(this.todo);
     }
 
